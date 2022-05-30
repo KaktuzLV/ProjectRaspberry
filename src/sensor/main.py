@@ -1,6 +1,10 @@
-from dht11 import dht11Sensor
-from dht11 import sqlInsert
+from sensor.dht11 import dht11Sensor
+from sensor.dht11 import sqlInsert
 import time
+
+
+def test_cmd():
+    print("SVEIKII!")
 
 if __name__ == "__main__":
     while True:
