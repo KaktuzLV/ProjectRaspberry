@@ -9,7 +9,10 @@ setup(
     author_email='psilvestrs@gmail.com',
     packages=['sensor', 'sensor.dht11'],
     zip_safe=False,
-    install_requires=[],
+    install_requires=[
+        #'Adafruit_DHT',
+        'pysqlite3'
+    ],
 )
 
 
