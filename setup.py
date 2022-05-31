@@ -13,7 +13,9 @@ setup(
     zip_safe=False,
     install_requires=[
         'Adafruit_DHT',
-        'pysqlite3'
+        'pysqlite3',
+        'paho-mqtt',
+        'pytz'
     ],
     entry_points={
         'console_scripts': [
