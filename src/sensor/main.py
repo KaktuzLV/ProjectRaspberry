@@ -10,26 +10,28 @@ broker = "165.227.163.44"
 
 def startSending(temperature, humidity, timedate):
     tempRead = {
-          "temperature": temperature,
-          "time": timedate,
+        "data": temperature,
+        "time": timedate,
+        "type": "temperature",
     }
     humidRead = {
-          "humidity": humidity,
-          "time": timedate,
+        "data": humidity,
+        "time": timedate,
+        "type": "humidity",
     }
     tempJson = json.dumps(tempRead)
     humidJson = json.dumps(humidRead)
     client = paho.Client("clientPI")
 
-    print("connecting to broker ", broker)
+    print("Connecting to broker", broker)
     client.connect(broker)
 
     client.loop_start()
-    print("subscribing ")
+    print("Subscribing")
     client.subscribe("test/temp")
     client.subscribe("test/humid")
     time.sleep(2)
-    print("publishing ")
+    print("Publishing")
     client.publish("test/temp", tempJson)
     client.publish("test/humid", humidJson)
     time.sleep(4)
