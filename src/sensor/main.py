@@ -1,6 +1,6 @@
-from dht11 import dht11Sensor
-from dht11 import sqlInsert
-from dht11 import sqlCreateTable
+from sensor.dht11 import dht11Sensor
+from sensor.dht11 import sqlInsert
+from sensor.dht11 import sqlCreateTable
 import paho.mqtt.client as paho
 import time
 import json
